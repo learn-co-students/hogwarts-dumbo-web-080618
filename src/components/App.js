@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   filterHogs = (event) => {
-    let hogsCopy = hogs
+    let hogsCopy = hogs.slice()
       if (event.target.nameFilter.value === "true") {
           hogsCopy.sort(function(a,b) {
         return a.name.localeCompare(b.name)
